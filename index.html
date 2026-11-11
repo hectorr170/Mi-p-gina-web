@@ -2,6 +2,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi página web</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: white;
+    background:
+        radial-gradient(circle at 20% 20%, #174b91 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, #542b91 0%, transparent 40%),
+        linear-gradient(135deg, #050b1c, #101c38, #080d20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 750px;
+    padding: 60px 35px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 25px;
+    box-shadow: 0 0 60px rgba(35,120,255,0.2);
+    backdrop-filter: blur(12px);
+}
+
+h1 {
+    font-size: clamp(35px, 7vw, 60px);
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #60a5fa, #c084fc);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+p {
+    color: #d1d5e5;
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #477dff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+    <h1>Mi página web</h1>
+
+    <p>
+        Bienvenido a mi proyecto de tecnología.
+        ¡Esta es mi primera página web!
+    </p>
+
+    <button onclick="alert('¡Gracias por visitar mi web!')">
+        ¡Haz clic aquí!
+    </button>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi página web</title>
