@@ -11,121 +11,190 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    min-height: 100vh;
     color: white;
     background:
-        radial-gradient(circle at 20% 20%, #174b91 0%, transparent 40%),
-        radial-gradient(circle at 80% 80%, #542b91 0%, transparent 40%),
+        radial-gradient(circle at 15% 20%, #174b91, transparent 40%),
+        radial-gradient(circle at 85% 80%, #542b91, transparent 40%),
         linear-gradient(135deg, #050b1c, #101c38, #080d20);
+    min-height: 100vh;
+}
+
+/* MENU */
+nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #ffffff20;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* INICIO */
+section {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-}
-
-.contenedor {
-    max-width: 750px;
-    padding: 60px 35px;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 25px;
-    box-shadow: 0 0 60px rgba(35,120,255,0.2);
-    backdrop-filter: blur(12px);
+    padding: 60px 20px;
 }
 
 h1 {
-    font-size: clamp(35px, 7vw, 60px);
-    margin-bottom: 20px;
+    font-size: clamp(40px, 7vw, 65px);
     background: linear-gradient(90deg, #60a5fa, #c084fc);
     -webkit-background-clip: text;
     color: transparent;
+    margin-bottom: 20px;
 }
 
 p {
     color: #d1d5e5;
     font-size: 19px;
     line-height: 1.7;
-    margin-bottom: 30px;
+    max-width: 650px;
 }
 
-button {
+.boton {
+    margin-top: 30px;
     padding: 15px 30px;
-    border: none;
     border-radius: 12px;
     background: linear-gradient(90deg, #2563eb, #9333ea);
     color: white;
-    font-size: 16px;
-    cursor: pointer;
+    text-decoration: none;
     transition: 0.3s;
 }
 
-button:hover {
+.boton:hover {
     transform: scale(1.08);
     box-shadow: 0 0 25px #477dff;
+}
+
+.contenido {
+    background: #ffffff0d;
+    border: 1px solid #ffffff20;
+    border-radius: 20px;
+    padding: 45px;
+    max-width: 750px;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #9ca3af;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="contenedor">
-    <h1>Mi página web</h1>
+<!-- MENU -->
+<nav>
+    <div class="logo">MI WEB</div>
 
-    <p>
-        Bienvenido a mi proyecto de tecnología.
-        ¡Esta es mi primera página web!
-    </p>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
 
-    <button onclick="alert('¡Gracias por visitar mi web!')">
-        ¡Haz clic aquí!
-    </button>
-</div>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página web</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #141e30, #243b55);
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        h1 {
-            font-size: 45px;
-        }
-
-        p {
-            font-size: 20px;
-        }
-
-        .contenido {
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 600px;
-            margin: auto;
-        }
-    </style>
-</head>
-<body>
+<!-- INICIO -->
+<section id="inicio">
     <div class="contenido">
-        <h1>Mi página web</h1>
-        <p>Bienvenido a mi proyecto de tecnología.</p>
+        <h1>Bienvenido a mi web</h1>
+        <p>
+            Esta es mi página personal.
+            Un espacio donde compartir mis proyectos
+            y aprender sobre tecnología.
+        </p>
+        <a href="#sobre-mi" class="boton">Descubrir más</a>
     </div>
+</section>
+
+<!-- SOBRE MI -->
+<section id="sobre-mi">
+    <div class="contenido">
+        <h1>Sobre mí</h1>
+        <p>
+            ¡Hola! Esta es mi página web personal.
+            Aquí podrás conocerme un poco mejor.
+        </p>
+    </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+    <div class="contenido">
+        <h1>Mis proyectos</h1>
+        <p>
+            Aquí iré publicando mis proyectos
+            y trabajos de tecnología.
+        </p>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+    <div class="contenido">
+        <h1>Contacto</h1>
+        <p>
+            ¡Gracias por visitar mi página web!
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Mi página web
+</footer>
+
 </body>
 </html>
 
