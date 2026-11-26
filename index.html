@@ -24,7 +24,7 @@ body {
 }
 
 /* MENU */
-nav {
+av {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,6 +116,20 @@ p {
     padding: 45px;
     max-width: 850px;
     width: 100%;
+}
+
+.video-contenedor {
+    width: 100%;
+    max-width: 720px;
+    margin: 20px auto 0;
+}
+
+video {
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    border-radius: 12px;
+    background: #000;
 }
 
 .lista-proyectos {
@@ -302,6 +316,17 @@ footer {
             <p>Aquí puedes añadir cada proyecto en su propio apartado.</p>
             <div class="lista-proyectos">
                 <!-- Añade aquí un bloque <details class="proyecto"> por cada proyecto. -->
+
+                <details class="proyecto">
+                    <summary>Mi vídeo</summary>
+                    <p>Una grabación incluida en esta página web.</p>
+                    <div class="video-contenedor">
+                        <video controls preload="metadata">
+                            <source src="video.mp4" type="video/mp4">
+                            Tu navegador no puede reproducir este vídeo.
+                        </video>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
@@ -407,7 +432,3 @@ blanco.addEventListener('click', () => {
 </script>
 </body>
 </html>
-<video width="100%" controls>
-<source src="video.mp4" type="video/mp4">
-    Tu navegador no puede reproducir este vídeo.
-</video>
