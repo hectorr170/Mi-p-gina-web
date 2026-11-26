@@ -28,10 +28,13 @@ av {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 8%;
+    width: min(100% - 48px, 1100px);
+    margin: 24px auto 0;
+    padding: 18px 28px;
     background: rgba(0,0,0,0.25);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid #ffffff20;
+    border: 1px solid #ffffff20;
+    border-radius: 16px;
 }
 
 .logo {
@@ -56,19 +59,24 @@ nav a:hover {
     color: #60a5fa;
 }
 
+main {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+}
+
 section {
-    min-height: 75vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 60px 20px;
+    padding: 48px 24px;
     scroll-margin-top: 20px;
 }
 
 h1 {
-    font-size: clamp(40px, 7vw, 65px);
+    font-size: clamp(36px, 5vw, 56px);
     background: linear-gradient(90deg, #60a5fa, #c084fc);
     -webkit-background-clip: text;
     background-clip: text;
@@ -83,7 +91,7 @@ h2 {
 
 p {
     color: #d1d5e5;
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.7;
     max-width: 650px;
     margin-left: auto;
@@ -113,21 +121,22 @@ p {
     background: #ffffff0d;
     border: 1px solid #ffffff20;
     border-radius: 20px;
-    padding: 45px;
-    max-width: 850px;
+    padding: 40px;
+    max-width: 780px;
     width: 100%;
 }
 
 .video-contenedor {
     width: 100%;
-    max-width: 500px;
+    max-width: 520px;
     margin: 20px auto 0;
 }
 
 video {
     display: block;
     width: 100%;
-    max-height: 70vh;
+    height: auto;
+    max-height: 65vh;
     object-fit: contain;
     border-radius: 12px;
     background: #000;
@@ -245,15 +254,20 @@ video {
 }
 
 footer {
+    width: min(100% - 48px, 1100px);
+    margin: 0 auto;
     text-align: center;
-    padding: 25px;
+    padding: 20px 12px 28px;
     color: #9ca3af;
 }
 
 @media (max-width: 600px) {
     nav {
+        width: calc(100% - 28px);
+        margin-top: 14px;
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
+        padding: 18px 14px;
     }
 
     nav ul {
@@ -264,6 +278,11 @@ footer {
 
     nav a {
         font-size: 14px;
+    }
+
+    section {
+        min-height: auto;
+        padding: 38px 14px;
     }
 
     .contenido {
@@ -280,6 +299,10 @@ footer {
 
     .campo-juego {
         height: 250px;
+    }
+
+    footer {
+        width: calc(100% - 28px);
     }
 }
 </style>
